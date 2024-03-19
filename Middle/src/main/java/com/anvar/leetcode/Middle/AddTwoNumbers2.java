@@ -23,7 +23,7 @@ public class AddTwoNumbers2 {
     }
 
     private Stack<Integer> listToStack(ListNode l) {
-        Stack<Integer> stack = new Stack();
+        Stack<Integer> stack = new Stack<>();
         while (l != null) {
             stack.add(l.val);
             l = l.next;
