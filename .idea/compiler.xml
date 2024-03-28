@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Easy" />
+        <module name="Shildt" />
         <module name="Middle" />
+        <module name="SQL" />
       </profile>
     </annotationProcessing>
   </component>
