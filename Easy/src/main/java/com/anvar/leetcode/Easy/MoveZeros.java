@@ -8,7 +8,7 @@ import java.util.Arrays;
 //        Note that you must do this in-place without making a copy of the array.
 public class MoveZeros {
     public static void main(String[] args) {
-        int nums[] ={0,1,0,3,12};
+        int[] nums = {0, 1, 0, 3, 12};
 
         System.out.println(Arrays.toString(nums));
 
@@ -17,22 +17,40 @@ public class MoveZeros {
         System.out.println(Arrays.toString(nums));
 
     }
-    public static void moveZeroes(int[] array) {
 
-        int lastNonZeroIndex = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] != 0) {
-                array[lastNonZeroIndex++] = array[i];
+//    public static void moveZeroes(int[] array) {
+//
+//        int lastNonZeroIndex = 0;
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] != 0) {
+//                array[lastNonZeroIndex++] = array[i];
+//            }
+//        }
+//
+//        for (int i = lastNonZeroIndex; i < array.length; i++) {
+//            array[i] = 0;
+//        }
+//    }
+
+    public static void moveZeroes(int[] nums) {
+
+        int size = nums.length;
+        if (size == 0 || size == 1) {
+            return;
+        }
+        int nz = 0, z = 0;
+        while (nz < size) {
+            if (nums[nz] != 0) {
+                int temp = nums[nz];
+                nums[nz] = nums[z];
+                nums[z] = temp;
+                nz++;
+                z++;
+            }else {
+                nz++;
             }
         }
-
-        for (int i = lastNonZeroIndex; i < array.length; i++) {
-            array[i] = 0;
-        }
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+
 }
