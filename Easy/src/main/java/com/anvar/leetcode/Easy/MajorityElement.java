@@ -5,7 +5,7 @@ public class MajorityElement {
     public static void main(String[] args) {
         int[] arr = {3, 2, 3};
 
-        System.out.println(badMajorityElement(arr));
+        System.out.println(majorityElement(arr));
 
     }
 
