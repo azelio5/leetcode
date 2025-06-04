@@ -13,7 +13,8 @@ public class TransposeOfAMatrix {
         System.out.println("Original Matrix: ");
         System.out.println(Arrays.deepToString(arr));
         System.out.println("Transposed Matrix: ");
-        System.out.println(Arrays.deepToString(transposeEff(arr)));
+        int[][] newM = transpose(arr);
+        System.out.println(Arrays.deepToString(newM));
     }
 
     //O(n2) coz new matrix
@@ -27,7 +28,7 @@ public class TransposeOfAMatrix {
         return tArr;
     }
 
-    public static int[][] transposeEff(int[][] A) {
+    public static void  transposeEff(int[][] A) {
         for (int i = 0; i < A.length - 1; i++) {
             for (int j = i + 1; j < A.length; j++) {
                 int temp = A[i][j];
@@ -35,6 +36,5 @@ public class TransposeOfAMatrix {
                 A[j][i] = temp;
             }
         }
-        return A;
     }
 }
