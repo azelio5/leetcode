@@ -46,7 +46,7 @@ public class CeilAndFloorOfArray {
 
     public static void main(String[] args) {
         int[] arr = {19, 23, 56, 61, 72, 88, 92};
-        int key = 72;
+        int key = 52;
         System.out.println(ceil(arr, key));
         System.out.println(floor(arr, key));
 
